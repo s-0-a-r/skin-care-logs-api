@@ -1,0 +1,8 @@
+-- This file is sample file for init.sql.
+-- Please copy this file to init.sql and edit it.
+-- init.sql is executed when the container is started.
+
+CREATE USER 'skincareloguser'@'%' IDENTIFIED BY 'skincarelogpass';
+GRANT ALL ON *.* TO 'skincareloguser'@'%';
+DROP DATABASE IF EXISTS skincarelogdb;
+CREATE DATABASE skincarelogdb;

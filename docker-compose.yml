@@ -23,3 +23,19 @@ services:
       - .:/app
     environment:
       - NODE_ENV=production
+
+  db:
+    image: mysql:8.2
+    container_name: skin-care-logs-db
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./src/db/initdb.d:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+volumes:
+  db_data:
