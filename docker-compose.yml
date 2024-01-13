@@ -1,0 +1,26 @@
+# production用docker compose設定
+version: '3'
+services:
+  development:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - 13300:3000
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+  
+  production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - 13300:3000
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=production
