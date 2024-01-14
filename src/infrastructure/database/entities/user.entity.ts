@@ -1,4 +1,4 @@
-import { DeletableEntity } from '@/infrastructure/db/shared/database/entities/deletable.entity';
+import { DeletableEntity } from '@/infrastructure/shared/database/entities/deletable.entity';
 import { Entity } from 'typeorm';
 
 @Entity({ name: 'users' })
