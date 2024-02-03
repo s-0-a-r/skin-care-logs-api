@@ -1,5 +1,5 @@
 import { Column, Entity, ManyToOne } from 'typeorm';
-import { DeletableEntity } from '../shared/database/entities/deletable.entity';
+import { DeletableEntity } from '../shared/db/entities/deletable.entity';
 import { ItemType } from './item_type.entity';
 
 @Entity({ name: 'items' })
