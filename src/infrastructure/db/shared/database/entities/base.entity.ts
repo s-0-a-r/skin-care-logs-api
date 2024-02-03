@@ -1,4 +1,3 @@
-import { randomUUID } from 'crypto';
 import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
@@ -6,10 +5,6 @@ import {
 } from 'typeorm';
 
 export abstract class EntityBase {
-  constructor() {
-    this.id = randomUUID();
-  }
-
   @PrimaryGeneratedColumn('uuid')
   readonly id: string;
 
