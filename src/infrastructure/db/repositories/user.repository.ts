@@ -3,7 +3,7 @@ import { User as DomainUser } from '@/domain/user/entities/user.entity';
 import { User as DatabaseUser } from '../entities/user.entity';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { IRepository } from '@/infrastructure/shared/database/repositories/interface.repository';
+import { IRepository } from '../shared/database/repositories/interface.repositories';
 
 @Injectable()
 export class UserRepository

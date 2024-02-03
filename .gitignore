@@ -38,4 +38,4 @@ lerna-debug.log*
 .env
 
 # Database
-/src/database/initdb.d/init.sql
+/src/db/initdb.d/init.sql
